@@ -1,0 +1,154 @@
+<div data-ng-controller="HomeControl" data-ng-init="init()">
+    <!-- Place of the day section -->
+    <div class="heading-bar">
+        <h3>Place of The Day</h3>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="col-lg-3">
+                <a href="#" class="thumbnail">
+                    <img data-src="holder.js/100%x180" alt="100%x180" style="height: 255px; width: 100%; display: block;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTRlMmE4YTQxNDEgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNGUyYThhNDE0MSI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI2MC4xODc1IiB5PSI5NC4zNjQwNjI1Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
+                </a>
+            </div>
+            <div class="col-lg-9 details-section-one">
+                <div class="top">
+                    <h4><a href="#">{{place.name}}</a></h4>
+                </div>
+                <div class="content">
+                    <p>
+                        {{place.description}}
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit tempor enim, in hendrerit massa. Nunc diam lacus, aliquam in velit non, mattis sagittis lacus. Mauris aliquam ultricies lectus, vel elementum sapien lacinia eu. Donec condimentum sodales auctor. Nunc sit amet imperdiet sem. Donec tincidunt, elit vel dapibus porttitor, mi est tincidunt augue, vel imperdiet odio dui eu lectus. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum. Fusce mattis ornare elit et sollicitudin. Donec volutpat hendrerit turpis, eget aliquam metus dictum quis.
+                        <a href="#">&nbsp;Read More...</a>
+                    </p>
+                </div>
+                <div class="bottom">
+                    <div class="pull-left">
+                        <i class="fa fa-facebook facebook-icon fa-2x"></i> &emsp;&emsp; <i class="fa fa-twitter twitter-icon fa-2x"></i> &emsp; &emsp;  <i class="fa fa-heart-o wishlist-icon fa-2x"> &nbsp;<span style="font-weight: 600; font-size:20px">Add to wishlist</span></i>
+                    </div>
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-primary">What are people saying</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Blogs Section -->
+
+    <div class="heading-bar">
+        <h3>Recent Blogs</h3>
+    </div>
+    <div class="row">
+
+        <div class="col-lg-12 m-lg-bottom">
+
+            <div class="col-lg-1">
+                <a href="#" class="thumbnail m-sm-top">
+                    <img data-src="holder.js/100%x200" alt="100%x200" style="min-height: 90px; max-height: 300px; width: 100%; display: block;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTRlMmE4YTQxNDEgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNGUyYThhNDE0MSI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI2MC4xODc1IiB5PSI5NC4zNjQwNjI1Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
+                </a>
+            </div>
+            <div class="col-lg-11 details-section-one">
+                <div class="top">
+                    <h5><a href="#">Title of blog</a></h5>
+                </div>
+                <div class="content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+
+                    </p>
+                </div>
+                <div class="bottom">
+                    <div class="pull-left">
+                        <a href="#">&nbsp;Read More</a> &nbsp;  <i class="fa fa-facebook-square facebook-icon"></i> &nbsp;<i class="fa fa-twitter-square twitter-icon"></i>
+                    </div>
+                    <div class="pull-right">
+                        <div class="col-sm-3 col-sm-offset-3 col-xs-3 col-xs-offset-3  p-lg-left">
+
+                            <a href="#" class="thumbnail ">
+                                <img data-src="holder.js/100%x180" alt="100%x180" style="max-height: 35px; width: 100%; display: block;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTRlMmE4YTQxNDEgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNGUyYThhNDE0MSI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI2MC4xODc1IiB5PSI5NC4zNjQwNjI1Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
+                            </a>
+                        </div>
+
+                        <div class="col-sm-6 col-xs-6 p-xs-left">
+                            <h5 class="m-xs-top">By <a href="#">Usman Amjed</a></h5>
+                            <h5>Added on 25th April</h5>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col-lg-12 m-lg-bottom">
+
+            <div class="col-lg-1">
+                <a href="#" class="thumbnail m-sm-top">
+                    <img data-src="holder.js/100%x200" alt="100%x200" style="min-height: 90px; max-height: 300px; width: 100%; display: block;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTRlMmE4YTQxNDEgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNGUyYThhNDE0MSI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI2MC4xODc1IiB5PSI5NC4zNjQwNjI1Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
+                </a>
+            </div>
+            <div class="col-lg-11 details-section-one">
+                <div class="top">
+                    <h5><a href="#">Title of blog</a></h5>
+                </div>
+                <div class="content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+
+                    </p>
+                </div>
+                <div class="bottom">
+                    <div class="pull-left">
+                        <a href="#">&nbsp;Read More</a> &nbsp;  <i class="fa fa-facebook-square facebook-icon"></i> &nbsp;<i class="fa fa-twitter-square twitter-icon"></i>
+                    </div>
+                    <div class="pull-right">
+                        <div class="col-sm-3 col-sm-offset-3 col-xs-3 col-xs-offset-3  p-lg-left">
+
+                            <a href="#" class="thumbnail ">
+                                <img data-src="holder.js/100%x180" alt="100%x180" style="max-height: 35px; width: 100%; display: block;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTRlMmE4YTQxNDEgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNGUyYThhNDE0MSI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI2MC4xODc1IiB5PSI5NC4zNjQwNjI1Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
+                            </a>
+                        </div>
+
+                        <div class="col-sm-6 col-xs-6 p-xs-left">
+                            <h5 class="m-xs-top">By <a href="#">Usman Amjed</a></h5>
+                            <h5>Added on 25th April</h5>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Forums Section -->
+
+    <div class="heading-bar">
+        <h3>Trending Discussions</h3>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div ng-repeat="topic in topics" class="col-lg-12 details-section-one">
+                <div class="top">
+                    <h4><a href="#">{{topic.title}}</a></h4>
+                </div>
+                <div class="content">
+                    posted in {{topic.category.name}} by {{topic.user.userslug}} posts {{topic.postcount}} views {{topic.viewcount}}
+                </div>
+                <div class="bottom">
+                    <div class="pull-left">
+                        <i class="fa fa-reply-all  traverse-icon"><h5 class="bold" style="display: inline">&nbsp;<span>100 </span>Replies</h5></i> &nbsp; &nbsp; <i class="fa fa-eye traverse-icon"><h5 class="bold" style="display: inline">&nbsp;Follow</h5></i> &nbsp; &nbsp; <i class="fa fa-twitter twitter-icon"><h5 class="bold" style="display: inline">&nbsp;Twitter</h5></i> &emsp; <i class="fa fa-facebook facebook-icon"><h5 class="bold" style="display: inline">&nbsp;Facebook</h5></i>
+                    </div>
+                    <div class="pull-right m-lg-right p-lg-right">
+                        <i class="fa fa-clock-o"><h5 class="bold" style="display: inline">&nbsp;22nd April, 10:30 pm</h5></i>
+                    </div>
+                </div>
+                <div class="horizontal-divider"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- Forums Section -->
+</div>

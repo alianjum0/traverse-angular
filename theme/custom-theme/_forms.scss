@@ -1,0 +1,38 @@
+
+
+// Form Elements Overwrides
+
+.navbar-search
+{
+  border-radius: $navbar-search-border-radius;
+  width: 300px !important;
+
+  @media screen and (max-width: 767px)
+  {
+    margin-left: 10px;
+    width: 98% !important;
+    margin-right: 0px;
+  }
+}
+
+#login-button
+{
+  border-radius: 4px;
+  margin-top: 8px;
+  width: 120px;
+  margin-left: 10px;
+}
+
+.horizontal-divider
+{
+  display: inline-block;
+  width: 95%;
+  padding: 0;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 21px;
+  line-height: inherit;
+  border: 0;
+  border-bottom: 2px solid $gray;
+}

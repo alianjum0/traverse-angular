@@ -1,0 +1,41 @@
+// Padding helper
+@mixin padding ($value, $direction: all) {
+  @if $direction == left {
+    padding-left: $value;
+  } @else if $direction == right {
+    padding-right: $value;
+  } @else if $direction == top {
+    padding-top: $value;
+  } @else if $direction == bottom {
+    padding-bottom: $value;
+  } @else if $direction == left-right {
+    padding-left: $value;
+    padding-right: $value;
+  } @else if $direction == top-bottom {
+    padding-top: $value;
+    padding-bottom: $value;
+  } @else {
+    padding: $value;
+  }
+}
+
+// Margin helper
+@mixin margin ($value, $direction: all) {
+  @if $direction == left {
+    margin-left: $value;
+  } @else if $direction == right {
+    margin-right: $value;
+  } @else if $direction == top {
+    margin-top: $value;
+  } @else if $direction == bottom {
+    margin-bottom: $value;
+  } @else if $direction == left-right {
+    margin-left: $value;
+    margin-right: $value;
+  } @else if $direction == top-bottom {
+    margin-top: $value;
+    margin-bottom: $value;
+  } @else {
+    margin: $value;
+  }
+}

@@ -1,0 +1,37 @@
+$spacing-sizes: xs sm md lg xlg xxlg;
+$spacing-sides: left right top bottom left-right top-bottom;
+
+@each $size in $spacing-sizes {
+  @each $side in $spacing-sides {
+    .p-#{$size}-#{$side} {
+      @if $size == xs {
+        @include padding($mini-space, $side);
+      } @else if $size == sm {
+        @include padding($small-space, $side);
+      } @else if $size == md {
+        @include padding($medium-space, $side);
+      } @else if $size == lg {
+        @include padding($large-space, $side);
+      } @else if $size == xlg {
+        @include padding($x-large-space, $side);
+      } @else if $size == xxlg {
+        @include padding($xx-large-space, $side);
+      }
+    }
+    .m-#{$size}-#{$side} {
+      @if $size == xs {
+        @include margin($mini-space, $side);
+      } @else if $size == sm {
+        @include margin($small-space, $side);
+      } @else if $size == md {
+        @include margin($medium-space, $side);
+      } @else if $size == lg {
+        @include margin($large-space, $side);
+      } @else if $size == xlg {
+        @include margin($x-large-space, $side);
+      } @else if $size == xxlg {
+        @include margin($xx-large-space, $side);
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+
+.navbar-brand
+{
+  margin-right: 50px;
+}
+
+.navbar-nav
+{
+  > li > a
+  {
+    width: 100px;
+    text-align: center;
+
+    @media screen and (max-width: 1060px)
+    {
+      width: auto;
+    }
+  }
+
+
+}

@@ -1,0 +1,97 @@
+// Overall elements of the theme
+
+body
+{
+  background-color: $brand-white-dark;
+}
+
+.heading-bar
+{
+  border: 2px solid #bdc3c7;
+  height: 50px;
+  font-weight: 600;
+  color: #27ae60;
+  text-align: center;
+  background-color: white;
+  margin-bottom: $x-large-space;
+
+  h3
+  {
+    margin-top: $medium-space;
+  }
+}
+
+.traverse-icon
+{
+  color: $gray-dark;
+  font-weight: 600;
+  transition: color .3s ease-in-out;
+  &:hover
+  {
+    color: $brand-primary-dark;
+    cursor: pointer;
+  }
+
+}
+
+.facebook-icon
+{
+  color: $gray-dark;
+  transition: color .3s ease-in-out;
+  &:hover
+  {
+    color: $brand-dark-blue;
+    cursor: pointer;
+  }
+}
+
+.twitter-icon
+{
+  color: $gray-dark;
+  transition: color .3s ease-in-out;
+  &:hover
+  {
+      color: $brand-blue;
+      cursor: pointer;
+  }
+}
+
+.details-section-one
+{
+  .top
+  {
+    a
+    {
+        color: $gray-dark;
+        margin-bottom: $x-large-space;
+
+        &:hover
+        {
+          color: $gray
+        }
+    }
+  }
+
+  .content
+  {
+    margin-top: $x-large-space;
+    margin-bottom: $x-large-space;
+    word-wrap: normal;
+  }
+
+  .bottom
+  {
+    height: 40px;
+    margin-top: $xx-large-space;
+    margin-bottom: $xx-large-space;
+  }
+
+}
+
+.bold
+{
+  font-weight: 700;
+}
+
+
+

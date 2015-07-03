@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Welcome to Traverse Pakstan</title>
+
+    <!-- Bootstrap -->
+    <link href="stylesheets/style.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="stylesheets/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+
+
+        #home-page-carousal
+        {
+            max-height: 600px;
+            width: 105%;
+            margin-top: -20px;
+            margin-left: -20px;
+            margin-right: -40px;
+        }
+
+        .home-page-carousal img
+        {
+            width: 100%;
+            max-height: 100%
+        }
+
+
+
+        #main-container
+        {
+            padding: 0px;
+        }
+
+
+        .wishlist-icon:hover
+        {
+            content: "\f004";
+            color: #c0392b;
+
+        }
+
+    </style>
+</head>
+<body>
+<header role="banner">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#traverse-main-navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="height: 50px; width: 130px; padding: 5px 5px">
+                    <img alt="Traverse Pakistan" width="120px" height="40px" src="assets/traverse_pakistan_logo.png">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="traverse-main-navbar">
+                <ul class="nav navbar-nav">
+                    <!--<li class="active"><a href="#">Places <span class="sr-only">(current)</span></a></li>-->
+                    <li><a href="#">Places</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control navbar-search" placeholder="Search">
+                            <i class="glyphicon glyphicon-search form-control-feedback"></i>
+                        </div>
+                    </form>
+                    <li><button type="button" id="login-button" class="btn btn-primary">Login</button> </li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+
+<body>
+    <div class="container-fluid" id="main-container">
+
+        <!-- Place of the day section -->
+        <div class="heading-bar">
+            <h3>Place of The Day</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="col-lg-3">
+                    <a href="#" class="thumbnail">
+                        <img data-src="holder.js/100%x180" alt="100%x180" style="height: 255px; width: 100%; display: block;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTRlMmE4YTQxNDEgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNGUyYThhNDE0MSI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI2MC4xODc1IiB5PSI5NC4zNjQwNjI1Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
+                    </a>
+                </div>
+                <div class="col-lg-9 details-section-one">
+                    <div class="top">
+                        <h4><a href="#">Name of the place</a></h4>
+                    </div>
+                    <div class="content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit tempor enim, in hendrerit massa. Nunc diam lacus, aliquam in velit non, mattis sagittis lacus. Mauris aliquam ultricies lectus, vel elementum sapien lacinia eu. Donec condimentum sodales auctor. Nunc sit amet imperdiet sem. Donec tincidunt, elit vel dapibus porttitor, mi est tincidunt augue, vel imperdiet odio dui eu lectus. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum. Fusce mattis ornare elit et sollicitudin. Donec volutpat hendrerit turpis, eget aliquam metus dictum quis.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit tempor enim, in hendrerit massa. Nunc diam lacus, aliquam in velit non, mattis sagittis lacus. Mauris aliquam ultricies lectus, vel elementum sapien lacinia eu. Donec condimentum sodales auctor. Nunc sit amet imperdiet sem. Donec tincidunt, elit vel dapibus porttitor, mi est tincidunt augue, vel imperdiet odio dui eu lectus. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum. Fusce mattis ornare elit et sollicitudin. Donec volutpat hendrerit turpis, eget aliquam metus dictum quis.
+                            <a href="#">&nbsp;Read More...</a>
+                        </p>
+                    </div>
+                    <div class="bottom">
+                        <div class="pull-left">
+                            <i class="fa fa-facebook facebook-icon fa-2x"></i> &emsp;&emsp; <i class="fa fa-twitter twitter-icon fa-2x"></i> &emsp; &emsp;  <i class="fa fa-heart-o wishlist-icon fa-2x"> &nbsp;<span style="font-weight: 600; font-size:20px">Add to wishlist</span></i>
+                        </div>
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-primary">What are people saying</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Blogs Section -->
+
+        <div class="heading-bar">
+            <h3>Recent Blogs</h3>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-12 m-lg-bottom">
+
+                <div class="col-lg-1">
+                    <a href="#" class="thumbnail m-sm-top">
+                        <img data-src="holder.js/100%x200" alt="100%x200" style="min-height: 90px; max-height: 300px; width: 100%; display: block;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTRlMmE4YTQxNDEgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNGUyYThhNDE0MSI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI2MC4xODc1IiB5PSI5NC4zNjQwNjI1Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
+                    </a>
+                </div>
+                <div class="col-lg-11 details-section-one">
+                    <div class="top">
+                        <h5><a href="#">Title of blog</a></h5>
+                    </div>
+                    <div class="content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+
+                        </p>
+                    </div>
+                    <div class="bottom">
+                        <div class="pull-left">
+                            <a href="#">&nbsp;Read More</a> &nbsp;  <i class="fa fa-facebook-square facebook-icon"></i> &nbsp;<i class="fa fa-twitter-square twitter-icon"></i>
+                        </div>
+                        <div class="pull-right">
+                            <div class="col-sm-3 col-sm-offset-3 col-xs-3 col-xs-offset-3  p-lg-left">
+
+                                <a href="#" class="thumbnail ">
+                                    <img data-src="holder.js/100%x180" alt="100%x180" style="max-height: 35px; width: 100%; display: block;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTRlMmE4YTQxNDEgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNGUyYThhNDE0MSI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI2MC4xODc1IiB5PSI5NC4zNjQwNjI1Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-xs-6 p-xs-left">
+                                <h5 class="m-xs-top">By <a href="#">Usman Amjed</a></h5>
+                                <h5>Added on 25th April</h5>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-lg-12 m-lg-bottom">
+
+                <div class="col-lg-1">
+                    <a href="#" class="thumbnail m-sm-top">
+                        <img data-src="holder.js/100%x200" alt="100%x200" style="min-height: 90px; max-height: 300px; width: 100%; display: block;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTRlMmE4YTQxNDEgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNGUyYThhNDE0MSI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI2MC4xODc1IiB5PSI5NC4zNjQwNjI1Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
+                    </a>
+                </div>
+                <div class="col-lg-11 details-section-one">
+                    <div class="top">
+                        <h5><a href="#">Title of blog</a></h5>
+                    </div>
+                    <div class="content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+
+                        </p>
+                    </div>
+                    <div class="bottom">
+                        <div class="pull-left">
+                            <a href="#">&nbsp;Read More</a> &nbsp;  <i class="fa fa-facebook-square facebook-icon"></i> &nbsp;<i class="fa fa-twitter-square twitter-icon"></i>
+                        </div>
+                        <div class="pull-right">
+                            <div class="col-sm-3 col-sm-offset-3 col-xs-3 col-xs-offset-3  p-lg-left">
+
+                                <a href="#" class="thumbnail ">
+                                    <img data-src="holder.js/100%x180" alt="100%x180" style="max-height: 35px; width: 100%; display: block;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTRlMmE4YTQxNDEgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNGUyYThhNDE0MSI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI2MC4xODc1IiB5PSI5NC4zNjQwNjI1Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-xs-6 p-xs-left">
+                                <h5 class="m-xs-top">By <a href="#">Usman Amjed</a></h5>
+                                <h5>Added on 25th April</h5>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Forums Section -->
+
+        <div class="heading-bar">
+            <h3>Trending Discussions</h3>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-12">
+                <div class="col-lg-12 details-section-one">
+                    <div class="top">
+                        <h4><a href="#">Forum Post Title</a></h4>
+                    </div>
+                    <div class="content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+                            <a href="#">&nbsp;Read More</a> &nbsp;
+                        </p>
+                    </div>
+                    <div class="bottom">
+                        <div class="pull-left">
+                            <i class="fa fa-reply-all  traverse-icon"><h5 class="bold" style="display: inline">&nbsp;<span>100 </span>Replies</h5></i> &nbsp; &nbsp; <i class="fa fa-eye traverse-icon"><h5 class="bold" style="display: inline">&nbsp;Follow</h5></i> &nbsp; &nbsp; <i class="fa fa-twitter twitter-icon"><h5 class="bold" style="display: inline">&nbsp;Twitter</h5></i> &emsp; <i class="fa fa-facebook facebook-icon"><h5 class="bold" style="display: inline">&nbsp;Facebook</h5></i>
+                        </div>
+                        <div class="pull-right m-lg-right p-lg-right">
+                            <i class="fa fa-clock-o"><h5 class="bold" style="display: inline">&nbsp;22nd April, 10:30 pm</h5></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="horizontal-divider"> </div>
+
+                <div class="col-lg-12 details-section-one">
+                    <div class="top">
+                        <h4><a href="#">Forum Post Title</a></h4>
+                    </div>
+                    <div class="content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+                            <a href="#">&nbsp;Read More</a> &nbsp;
+                        </p>
+                    </div>
+                    <div class="bottom">
+                        <div class="pull-left">
+                            <i class="fa fa-reply-all  traverse-icon"><h5 class="bold" style="display: inline">&nbsp;<span>100 </span>Replies</h5></i> &nbsp; &nbsp; <i class="fa fa-eye traverse-icon"><h5 class="bold" style="display: inline">&nbsp;Follow</h5></i> &nbsp; &nbsp; <i class="fa fa-twitter twitter-icon"><h5 class="bold" style="display: inline">&nbsp;Twitter</h5></i> &emsp; <i class="fa fa-facebook facebook-icon"><h5 class="bold" style="display: inline">&nbsp;Facebook</h5></i>
+                        </div>
+                        <div class="pull-right m-lg-right p-lg-right">
+                            <i class="fa fa-clock-o"><h5 class="bold" style="display: inline">&nbsp;22nd April, 10:30 pm</h5></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+
+        <!-- Who Are We Section -->
+
+        <div class="heading-bar">
+            <h3>Who Are We?</h3>
+        </div>
+
+        </div>
+    </div>
+</body>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="javascript/bootstrap.min.js"></script>
+</body>
+</html>
