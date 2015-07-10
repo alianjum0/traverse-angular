@@ -3,6 +3,7 @@
 body
 {
   background-color: $brand-white-dark;
+  overflow-x: hidden;
 }
 
 .heading-bar
@@ -10,7 +11,7 @@ body
   border: 2px solid #bdc3c7;
   height: 50px;
   font-weight: 600;
-  color: #27ae60;
+  color: $brand-primary-light;
   text-align: center;
   background-color: white;
   margin-bottom: $x-large-space;
