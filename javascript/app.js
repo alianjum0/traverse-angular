@@ -57,54 +57,57 @@ app.controller('MyCtrl', function($scope) {
     
 })
 
-app.controller('HomeControl', function($scope, $http,TodosService) {
+app.controller('HomeControl', function($scope, $http,TodosService,$timeout) {
     $scope.topics = {}
     $scope.place = {}
     $scope.crousalimage = TodosService.crousalimage
     $scope.myInterval = 5000;
+    $timeout(function() {
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            paginationClickable: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: 2500,
+            autoplayDisableOnInteraction: false,
+            speed: 700,
+            loop: true
+        });
+    });
+    
     $scope.init = function () {
-        $http.get(nodebb_link  +  'recent').
-          success(function(data, status, headers, config) {
-            var swiper = new Swiper('.swiper-container', {
-                pagination: '.swiper-pagination',
-                nextButton: '.swiper-button-next',
-                prevButton: '.swiper-button-prev',
-                paginationClickable: true,
-                spaceBetween: 30,
-                centeredSlides: true,
-                autoplay: 2500,
-                autoplayDisableOnInteraction: false,
-                speed: 700,
-                loop: true
-            });
-            if(data)
-            {
-                topics = data.topics
-                topics = topics.slice(0, 3);
-                console.log(data);
-                for ( i = 0; i < topics.length; i++ )
-                {
-                    console.log(topics[i].tid)
-                    $http.get(nodebb_link  +  'post/'+topics[i].tid).
-                      success(function(data, status, headers, config) {
-                        if(data)
-                        {
-                            console.log(data.content)
-                            topics.content = data.content
-                        }
-                    })
-                }
-                $scope.topics = topics
-            }
-        });
-        $http.get('http://localhost:4567/site/place/1').
-          success(function(data, status, headers, config) {
-            if(data)
-            {
-                console.log(data.result[0]);
-                $scope.place = data.result[0]
-            }
-        });
+//        $http.get(nodebb_link  +  'recent').
+//          success(function(data, status, headers, config) {
+//            if(data)
+//            {
+//                topics = data.topics
+//                topics = topics.slice(0, 3);
+//                console.log(data);
+//                for ( i = 0; i < topics.length; i++ )
+//                {
+//                    console.log(topics[i].tid)
+//                    $http.get(nodebb_link  +  'post/'+topics[i].tid).
+//                      success(function(data, status, headers, config) {
+//                        if(data)
+//                        {
+//                            console.log(data.content)
+//                            topics.content = data.content
+//                        }
+//                    })
+//                }
+//                $scope.topics = topics
+//            }
+//        });
+//        $http.get('http://localhost:4567/site/place/1').
+//          success(function(data, status, headers, config) {
+//            if(data)
+//            {
+//                console.log(data.result[0]);
+//                $scope.place = data.result[0]
+//            }
+//        });
     };
     
 })
