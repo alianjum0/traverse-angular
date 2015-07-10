@@ -25,7 +25,8 @@
 
     <style>
 
-
+        body{
+        overflow-x: hidden;}
         #home-page-carousal
         {
             max-height: 600px;
@@ -80,6 +81,7 @@
             -ms-flex-align: center;
             -webkit-align-items: center;
             align-items: center;
+            loop: true;
         }
 
     </style>
@@ -96,7 +98,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#" style="height: 50px; width: 130px; padding: 5px 5px">
+                <a class="navbar-brand" href="#/homepage" style="height: 50px; width: 130px; padding: 5px 5px">
                     <img alt="Traverse Pakistan" width="120px" height="40px" src="assets/traverse_pakistan_logo.png">
                 </a>
             </div>
@@ -105,10 +107,10 @@
             <div class="collapse navbar-collapse" id="traverse-main-navbar">
                 <ul class="nav navbar-nav">
                     <!--<li class="active"><a href="#">Places <span class="sr-only">(current)</span></a></li>-->
-                    <li><a href="#">Places</a></li>
-                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#/place">Places</a></li>
+                    <li><a href="#/blog">Blogs</a></li>
                     <li><a href="#">Forums</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="#/about">About Us</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
@@ -125,6 +127,7 @@
         </div><!-- /.container-fluid -->
     </nav>
 </header>
+<body>
     <div class="container-fluid">
         <!--    view    -->
           <ion-nav-view name="home" animation="no-animation"></ion-nav-view>
@@ -137,10 +140,5 @@
         </div>
 
     </div>
-    
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="javascript/bootstrap.min.js"></script>
 </body>
 </html>

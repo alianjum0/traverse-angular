@@ -62,20 +62,21 @@ app.controller('HomeControl', function($scope, $http,TodosService) {
     $scope.place = {}
     $scope.crousalimage = TodosService.crousalimage
     $scope.myInterval = 5000;
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        paginationClickable: true,
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: 2500,
-        autoplayDisableOnInteraction: false,
-        speed: 700
-    });
     $scope.init = function () {
         $http.get(nodebb_link  +  'recent').
           success(function(data, status, headers, config) {
+            var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                paginationClickable: true,
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: 2500,
+                autoplayDisableOnInteraction: false,
+                speed: 700,
+                loop: true
+            });
             if(data)
             {
                 topics = data.topics
@@ -124,20 +125,36 @@ app.controller('PlaceControl', function($scope,weatherService,$http) {
 app.factory('TodosService', function() {
     crousalimage = [
         {
-            'image' : 'assets/1.jpg',
+            'image' : 'assets/a2.jpg',
             'text' : 'First'
         },
         {
-            'image' : 'assets/2.jpg',
+            'image' : 'assets/a1.jpg',
             'text' : 'Second'
         },
         {
-            'image' : 'assets/3.jpg',
+            'image' : 'assets/a3.jpg',
             'text' : 'Third'
         },
         {
-            'image' : 'assets/4.jpg',
+            'image' : 'assets/a4.jpg',
             'text' : 'Fourth'
+        },
+        {
+            'image' : 'assets/a5.jpg',
+            'text' : 'Five'
+        },
+        {
+            'image' : 'assets/a6.jpg',
+            'text' : 'Six'
+        },
+        {
+            'image' : 'assets/a7.jpg',
+            'text' : 'Seven'
+        },
+        {
+            'image' : 'assets/a8.jpg',
+            'text' : 'Eight'
         }
     ]
 return {
