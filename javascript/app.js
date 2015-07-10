@@ -5,10 +5,13 @@
 // the 2nd parameter is an array of 'requires'
 // Code goes here
 
-var app = angular.module('ionicApp', ['ionic'])
+var nodebb_link = 'http://localhost:4567/api/'
+var app = angular.module('ionicApp', ['ionic','ui.bootstrap'])
 
-app.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
+app.config(function($stateProvider, $urlRouterProvider,$httpProvider, $ionicConfigProvider) {
 $httpProvider.defaults.withCredentials = true;
+  $ionicConfigProvider.views.maxCache(0);
+     $ionicConfigProvider.views.transition('none');
   $urlRouterProvider.otherwise('/homepage')
   $stateProvider.state('start', {
     abstract: true,
@@ -23,28 +26,70 @@ $httpProvider.defaults.withCredentials = true;
       }
     }  
   })
+  $stateProvider.state('start.about', {
+    url: '/about', 
+    views: {
+      home: {
+        templateUrl: 'templates/about.html'
+      }
+    }  
+  })
+  $stateProvider.state('start.blog', {
+    url: '/blog',
+    views: {
+      home: {
+        templateUrl: 'templates/blog.html'
+      }
+    }  
+  })
+  $stateProvider.state('start.place', {
+    url: '/place',
+    conreoller : 'PlaceControl',  
+    views: {
+      home: {
+        templateUrl: 'templates/place.html'
+      }
+    }  
+  })
 })
 
 app.controller('MyCtrl', function($scope) {
     
 })
+
 app.controller('HomeControl', function($scope, $http,TodosService) {
     $scope.topics = {}
     $scope.place = {}
+    $scope.crousalimage = TodosService.crousalimage
+    $scope.myInterval = 5000;
     $scope.init = function () {
-        $http.get('http://localhost:4567/api/recent').
+        $http.get(nodebb_link  +  'recent').
           success(function(data, status, headers, config) {
             if(data)
             {
-                console.log(data.topics);
-                $scope.topics = data.topics
+                topics = data.topics
+                topics = topics.slice(0, 3);
+                console.log(data);
+                for ( i = 0; i < topics.length; i++ )
+                {
+                    console.log(topics[i].tid)
+                    $http.get(nodebb_link  +  'post/'+topics[i].tid).
+                      success(function(data, status, headers, config) {
+                        if(data)
+                        {
+                            console.log(data.content)
+                            topics.content = data.content
+                        }
+                    })
+                }
+                $scope.topics = topics
             }
         });
         $http.get('http://localhost:4567/site/place/1').
           success(function(data, status, headers, config) {
             if(data)
             {
-                console.log(data);
+                console.log(data.result[0]);
                 $scope.place = data.result[0]
             }
         });
@@ -52,224 +97,97 @@ app.controller('HomeControl', function($scope, $http,TodosService) {
     
 })
 
+app.controller('PlaceControl', function($scope,weatherService,$http) {
+    $scope.weather = weatherService.getWeather();
+    console.log($scope.weather)
+    $http.get('http://localhost:4567/site/gallery/swat',
+              {headers: {'accept': 'application/json'}}).
+      success(function(data, status, headers, config) {
+        if(data)
+        {
+            console.log(data);
+        }
+    });
+})
+
 app.factory('TodosService', function() {
-    topics = {
-    "topics": [
+    crousalimage = [
         {
-            "_key": "topic:5",
-            "tid": 5,
-            "uid": 1,
-            "cid": "1",
-            "mainPid": 5,
-            "title": "Announcement 2",
-            "slug": "5/announcement-2",
-            "timestamp": 1435748383529,
-            "lastposttime": 1435748383546,
-            "postcount": 1,
-            "viewcount": 2,
-            "locked": false,
-            "deleted": false,
-            "pinned": false,
-            "relativeTime": "2015-07-01T10:59:43.529Z",
-            "lastposttimeISO": "2015-07-01T10:59:43.546Z",
-            "category": {
-                "_key": "category:1",
-                "cid": 1,
-                "name": "Announcements",
-                "icon": "fa-bullhorn",
-                "bgColor": "#fda34b",
-                "color": "#fff",
-                "slug": "1/announcements",
-                "disabled": false
-            },
-            "user": {
-                "_key": "user:1",
-                "username": "ali",
-                "userslug": "ali",
-                "picture": "https://secure.gravatar.com/avatar/5e3bd112ff4002ec8ebc1d8ab04eca68?size=128&default=identicon&rating=pg",
-                "uid": 1
-            },
-            "tags": [],
-            "isOwner": true,
-            "unread": false,
-            "unreplied": true
+            'image' : 'assets/1.jpg',
+            'text' : 'First'
         },
         {
-            "_key": "topic:4",
-            "tid": 4,
-            "uid": 1,
-            "cid": "1",
-            "mainPid": 4,
-            "title": "Announcements 1",
-            "slug": "4/announcements-1",
-            "timestamp": 1435748373459,
-            "lastposttime": 1435748373506,
-            "postcount": 1,
-            "viewcount": 1,
-            "locked": false,
-            "deleted": false,
-            "pinned": false,
-            "relativeTime": "2015-07-01T10:59:33.459Z",
-            "lastposttimeISO": "2015-07-01T10:59:33.506Z",
-            "category": {
-                "_key": "category:1",
-                "cid": 1,
-                "name": "Announcements",
-                "icon": "fa-bullhorn",
-                "bgColor": "#fda34b",
-                "color": "#fff",
-                "slug": "1/announcements",
-                "disabled": false
-            },
-            "user": {
-                "_key": "user:1",
-                "username": "ali",
-                "userslug": "ali",
-                "picture": "https://secure.gravatar.com/avatar/5e3bd112ff4002ec8ebc1d8ab04eca68?size=128&default=identicon&rating=pg",
-                "uid": 1
-            },
-            "tags": [],
-            "isOwner": true,
-            "unread": false,
-            "unreplied": true
+            'image' : 'assets/2.jpg',
+            'text' : 'Second'
         },
         {
-            "_key": "topic:3",
-            "tid": 3,
-            "uid": 1,
-            "cid": "3",
-            "mainPid": 3,
-            "title": "Blog 2",
-            "slug": "3/blog-2",
-            "timestamp": 1435748350482,
-            "lastposttime": 1435748350496,
-            "postcount": 1,
-            "viewcount": 2,
-            "locked": false,
-            "deleted": false,
-            "pinned": false,
-            "relativeTime": "2015-07-01T10:59:10.482Z",
-            "lastposttimeISO": "2015-07-01T10:59:10.496Z",
-            "category": {
-                "_key": "category:3",
-                "cid": 3,
-                "name": "Blogs",
-                "icon": "fa-newspaper-o",
-                "bgColor": "#86ba4b",
-                "color": "#fff",
-                "slug": "3/blogs",
-                "disabled": false
-            },
-            "user": {
-                "_key": "user:1",
-                "username": "ali",
-                "userslug": "ali",
-                "picture": "https://secure.gravatar.com/avatar/5e3bd112ff4002ec8ebc1d8ab04eca68?size=128&default=identicon&rating=pg",
-                "uid": 1
-            },
-            "tags": [],
-            "isOwner": true,
-            "unread": false,
-            "unreplied": true
+            'image' : 'assets/3.jpg',
+            'text' : 'Third'
         },
         {
-            "_key": "topic:2",
-            "tid": 2,
-            "uid": 1,
-            "cid": "3",
-            "mainPid": 2,
-            "title": "Blog 1",
-            "slug": "2/blog-1",
-            "timestamp": 1435748336985,
-            "lastposttime": 1435748337147,
-            "postcount": 1,
-            "viewcount": 1,
-            "locked": false,
-            "deleted": false,
-            "pinned": false,
-            "relativeTime": "2015-07-01T10:58:56.985Z",
-            "lastposttimeISO": "2015-07-01T10:58:57.147Z",
-            "category": {
-                "_key": "category:3",
-                "cid": 3,
-                "name": "Blogs",
-                "icon": "fa-newspaper-o",
-                "bgColor": "#86ba4b",
-                "color": "#fff",
-                "slug": "3/blogs",
-                "disabled": false
-            },
-            "user": {
-                "_key": "user:1",
-                "username": "ali",
-                "userslug": "ali",
-                "picture": "https://secure.gravatar.com/avatar/5e3bd112ff4002ec8ebc1d8ab04eca68?size=128&default=identicon&rating=pg",
-                "uid": 1
-            },
-            "tags": [],
-            "isOwner": true,
-            "unread": false,
-            "unreplied": true
-        },
-        {
-            "_key": "topic:1",
-            "tid": 1,
-            "uid": 1,
-            "cid": 2,
-            "mainPid": 1,
-            "title": "Welcome to your NodeBB!",
-            "slug": "1/welcome-to-your-nodebb",
-            "timestamp": 1435150175758,
-            "lastposttime": 1435150175781,
-            "postcount": 1,
-            "viewcount": 0,
-            "locked": false,
-            "deleted": false,
-            "pinned": false,
-            "relativeTime": "2015-06-24T12:49:35.758Z",
-            "lastposttimeISO": "2015-06-24T12:49:35.781Z",
-            "category": {
-                "_key": "category:2",
-                "cid": 2,
-                "name": "General Discussion",
-                "icon": "fa-comments-o",
-                "bgColor": "#59b3d0",
-                "color": "#fff",
-                "slug": "2/general-discussion",
-                "disabled": false
-            },
-            "user": {
-                "_key": "user:1",
-                "username": "ali",
-                "userslug": "ali",
-                "picture": "https://secure.gravatar.com/avatar/5e3bd112ff4002ec8ebc1d8ab04eca68?size=128&default=identicon&rating=pg",
-                "uid": 1
-            },
-            "tags": [],
-            "isOwner": true,
-            "unread": false,
-            "unreplied": true
+            'image' : 'assets/4.jpg',
+            'text' : 'Fourth'
         }
-    ],
-    "nextStart": 20,
-    "feeds:disableRSS": false,
-    "rssFeedUrl": "/recent.rss",
-    "breadcrumbs": [
-        {
-            "text": "[[global:home]]",
-            "url": "/"
-        },
-        {
-            "text": "[[recent:title]]"
-        }
-    ],
-    "loggedIn": true,
-    "template": {
-        "name": "recent",
-        "recent": true
-    }
-}
+    ]
 return {
-    topics: topics.topics,
+    crousalimage: crousalimage
   }
 })
+
+//    weather service 
+app.factory('weatherService', function($http) {
+    return { 
+      getWeather: function() {
+        var weather = { temp: {}, clouds: null };
+        $http.jsonp('http://api.openweathermap.org/data/2.5/weather?zip=44000,pk&units=metric&callback=JSON_CALLBACK').success(function(data) {
+            if (data) {
+                console.log(data)
+                if (data.main) {
+                    weather.temp.current = data.main.temp;
+                    weather.temp.min = data.main.temp_min;
+                    weather.temp.max = data.main.temp_max;
+                    weather.name = data.name;
+                }
+                weather.clouds = data.clouds ? data.clouds.all : undefined;
+            }
+        });
+
+        return weather;
+      }
+    }; 
+});
+
+app.filter('temp', function($filter) {
+    return function(input, precision) {
+        if (!precision) {
+            precision = 1;
+        }
+        var numberFilter = $filter('number');
+        return numberFilter(input, precision) + '\u00B0C';
+    };
+});
+
+app.directive('weatherIcon', function() {
+    return {
+        restrict: 'E', replace: true,
+        scope: {
+            cloudiness: '@'
+        },
+        controller: function($scope) {
+            $scope.imgurl = function() {
+                var baseUrl = 'https://ssl.gstatic.com/onebox/weather/128/';
+                if ($scope.cloudiness < 20) {
+                    return baseUrl + 'sunny.png';
+                } else if ($scope.cloudiness < 90) {
+                   return baseUrl + 'partly_cloudy.png';
+                } else {
+                    return baseUrl + 'cloudy.png';
+                }
+            };
+        },
+        template: '<div style="float:left"><img ng-src="{{ imgurl() }}"></div>'
+    };
+});
+
+
+//    weather service 

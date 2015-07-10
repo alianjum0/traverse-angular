@@ -5718,6 +5718,11 @@ body {
   border: 0;
   border-bottom: 2px solid #7f8c8d; }
 
+.navbar {
+  margin-bottom: 0px; }
+  .navbar .navbar-right {
+    margin-right: 2px; }
+
 .navbar-brand {
   margin-right: 50px; }
 

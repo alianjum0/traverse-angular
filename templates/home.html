@@ -1,4 +1,42 @@
 <div data-ng-controller="HomeControl" data-ng-init="init()">
+<!--    crousal -->
+<!--
+    <div >
+      <div style="height: 505px">
+        <carousel interval="myInterval">
+          <slide ng-repeat="slide in crousalimage" active="slide.active">
+            <img ng-src="{{slide.image}}" style="margin:auto;">
+            <div class="carousel-caption">
+              <h4>Slide {{$index}}</h4>
+              <p>{{slide.text}}</p>
+            </div>
+          </slide>
+        </carousel>
+      </div>
+      
+    </div>
+-->
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide">Slide 10</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+<!--    crousal -->
     <!-- Place of the day section -->
     <div class="heading-bar">
         <h3>Place of The Day</h3>
@@ -136,6 +174,7 @@
                     <h4><a href="#">{{topic.title}}</a></h4>
                 </div>
                 <div class="content">
+                    {{topics.content}}
                     posted in {{topic.category.name}} by {{topic.user.userslug}} posts {{topic.postcount}} views {{topic.viewcount}}
                 </div>
                 <div class="bottom">

@@ -13,6 +13,9 @@
     <!-- Font Awesome -->
     <link href="stylesheets/font-awesome.min.css" rel="stylesheet">
 
+    <!-- Swiper Slider -->
+    <link href="stylesheets/swiper.css" rel="stylesheet">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -53,11 +56,37 @@
 
         }
 
+        .swiper-container {
+            width: 100%;
+            height: 600px;
+
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            margin-right: 0px;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
     </style>
 </head>
 <body>
 <header role="banner">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -99,6 +128,27 @@
 
 <body>
     <div class="container-fluid" id="main-container">
+
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+                <div class="swiper-slide">Slide 10</div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
 
         <!-- Place of the day section -->
         <div class="heading-bar">
@@ -286,7 +336,10 @@
         <div class="heading-bar">
             <h3>Who Are We?</h3>
         </div>
+        <div class="row">
+            <div class="col-sm-6">
 
+            </div>
         </div>
     </div>
 </body>
@@ -295,5 +348,23 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="javascript/bootstrap.min.js"></script>
+<!-- Swiper Slider JS -->
+<script src="javascript/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script type="text/javascript">
+
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false,
+        speed: 700
+    });
+
+</script>
 </body>
 </html>

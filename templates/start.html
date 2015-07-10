@@ -13,6 +13,9 @@
     <!-- Font Awesome -->
     <link href="stylesheets/font-awesome.min.css" rel="stylesheet">
 
+    <!-- Swiper Slider -->
+    <link href="stylesheets/swiper.css" rel="stylesheet">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -53,11 +56,37 @@
 
         }
 
+        .swiper-container {
+            width: 100%;
+            height: 600px;
+
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            margin-right: 0px;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
     </style>
 </head>
 <body>
 <header role="banner">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -78,7 +107,7 @@
                     <!--<li class="active"><a href="#">Places <span class="sr-only">(current)</span></a></li>-->
                     <li><a href="#">Places</a></li>
                     <li><a href="#">Blogs</a></li>
-                    <li><a href="http://localhost:4567/">Forums</a></li>
+                    <li><a href="#">Forums</a></li>
                     <li><a href="#">About Us</a></li>
                 </ul>
 
@@ -97,8 +126,9 @@
     </nav>
 </header>
     <div class="container-fluid">
-<!--    view-->
-        <ion-nav-view name="home" ></ion-nav-view>
+        <!--    view    -->
+          <ion-nav-view name="home" animation="no-animation"></ion-nav-view>
+        <!--    view    -->
     
             <!-- Who Are We Section -->
 

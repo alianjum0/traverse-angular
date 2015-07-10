@@ -1,0 +1,10 @@
+<!--    place page-->
+<div data-ng-controller="PlaceControl">
+    <div class="heading-bar">
+        <h3>Places</h3>
+    </div>
+    <h2>Weather in {{weather.name}}</h2>
+    <weather-icon cloudiness="{{ weather.clouds }}"></weather-icon>
+    <h3>Current: {{ weather.temp.current | temp:2 }}</h3>
+    min: {{ weather.temp.min | temp }}, max: {{ weather.temp.max | temp }}
+</div>
