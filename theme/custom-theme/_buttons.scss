@@ -1,0 +1,30 @@
+// Custom Buttons Overwride
+
+.btn-traverse
+{
+  color: $brand-white;
+  border-color: $brand-primary-light;
+  background-color: $brand-primary-light;
+  font-weight: 600;
+
+  &:hover
+  {
+    color: $brand-white;
+    border-color: $brand-primary-dark;
+    background-color: $brand-primary-dark;
+  }
+}
+
+.btn-outline
+{
+  background-color: $brand-white;
+  color: $brand-primary-dark;
+  border: 2px solid $gray-light;
+  font-weight: 600;
+
+  &:hover
+  {
+    color: $brand-primary-light;
+    border-color: $brand-primary-light;
+  }
+}

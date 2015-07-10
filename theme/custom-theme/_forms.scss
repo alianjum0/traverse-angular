@@ -36,3 +36,32 @@
   border: 0;
   border-bottom: 2px solid $gray;
 }
+
+.form-control
+{
+  border-radius: 2px;
+  border-width: 2px;
+  border-color: $gray-light;
+
+  &:hover
+  {
+    border-color: $brand-primary-light
+  }
+
+  &:focus, &:active
+  {
+    border-color: $brand-primary-dark;
+    box-shadow: none;
+  }
+}
+
+.form-group
+{
+  .glyphicon
+  {
+    font-weight: 600;
+    color: $brand-primary-light;
+  }
+}
+
+
