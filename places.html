@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Name of the place</title>
+
+    <!-- Bootstrap -->
+    <link href="stylesheets/style.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="stylesheets/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Swiper Slider -->
+    <link href="stylesheets/swiper.css" rel="stylesheet">
+
+    <!-- Gallery -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap-image-gallery.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+
+        #main-container
+        {
+            padding: 0px;
+        }
+
+
+        .wishlist-icon:hover
+        {
+            content: "\f004";
+            color: #c0392b;
+
+        }
+
+    </style>
+</head>
+<body>
+        
+    <header role="banner">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#traverse-main-navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="height: 50px; width: 130px; padding: 5px 5px">
+                    <img alt="Traverse Pakistan" width="120px" height="40px" src="assets/traverse_pakistan_logo.png">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="traverse-main-navbar">
+                <ul class="nav navbar-nav">
+                    <!--<li class="active"><a href="#">Places <span class="sr-only">(current)</span></a></li>-->
+                    <li><a href="#">Places</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control navbar-search" placeholder="Search">
+                            <i class="glyphicon glyphicon-search form-control-feedback"></i>
+                        </div>
+                    </form>
+                    <li><button type="button" id="login-button" class="btn btn-outline">Login</button> </li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+
+<body>
+<div class="container-fluid" id="main-container">
+
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide">Slide 10</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+
+    <!-- Description Section -->
+
+    <div class="heading-bar m-xs-bottom">
+        <h3>Description</h3>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-lg-12 details-section-one">
+            <div class="top m-xlg-top m-sm-bottom">
+                <div class="row p-lg-left p-xlg-right">
+                    <div class="pull-left">
+                        <h3><a href="#">Gawadar</a></h3>
+                    </div>
+                    <div class="pull-right">
+                        <i style="font-size:20px" class="m-lg-top fa fa-heart-o wishlist-icon"> &nbsp;<span style="font-weight: 600;">Add to wishlist</span></i> &emsp; <i class="m-lg-top fa fa-facebook facebook-icon fa-2x"></i> &emsp; <i class="m-lg-top fa fa-twitter twitter-icon fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="horizontal-divider m-sm-bottom" style="margin-left: 3px; width: 99%; border-width: 1px"> </div>
+
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dapibus risus. Phasellus maximus, turpis vel porta sodales, tortor arcu eleifend magna, non tincidunt erat risus non ipsum.
+
+                    <a href="#">&nbsp;Read More</a> &nbsp;
+                </p>
+            </div>
+
+            <div class="top m-xlg-top m-sm-bottom">
+                <div class="row p-lg-left p-xlg-right">
+                    <div class="pull-left">
+                        <h3>Best Time To Visit</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="horizontal-divider m-xlg-bottom" style="margin-left: 3px; width: 99%; border-width: 1px"> </div>
+            <!-- Best Place To Visit Section -->
+            <div class="row m-xxlg-left-right m-xxlg-bottom">
+                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4 p-xs-left-right m-md-bottom">
+                    <div class="traverse-circle-empty">
+                        <h4>Jan</h4>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4 p-xs-left-right m-md-bottom">
+                    <div class="traverse-circle-empty">
+                        <h4>Feb</h4>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4 p-xs-left-right m-md-bottom">
+                    <div class="traverse-circle-empty">
+                        <h4>Mar</h4>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4 p-xs-left-right m-md-bottom">
+                    <div class="traverse-circle-empty">
+                        <h4>April</h4>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4 p-xs-left-right m-md-bottom">
+                    <div class="traverse-circle-full">
+                        <h4>May</h4>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4 p-xs-left-right m-md-bottom">
+                    <div class="traverse-circle-full">
+                        <h4>Jun</h4>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4 p-xs-left-right m-md-bottom">
+                    <div class="traverse-circle-full">
+                        <h4>July</h4>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4 p-xs-left-right m-md-bottom">
+                    <div class="traverse-circle-full">
+                        <h4>Aug</h4>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4 p-xs-left-right m-md-bottom">
+                    <div class="traverse-circle-empty">
+                        <h4>Sept</h4>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4 p-xs-left-right m-md-bottom">
+                    <div class="traverse-circle-empty">
+                        <h4>Oct</h4>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4 p-xs-left-right m-md-bottom">
+                    <div class="traverse-circle-empty">
+                        <h4>Nov</h4>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4 p-xs-left-right m-md-bottom">
+                    <div class="traverse-circle-empty">
+                        <h4>Dec</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="heading-bar">
+    <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+
+        <h3>Gallery</h3><br>
+        <div id="links">
+            <a href="https://farm1.static.flickr.com/423/19689531655_a55e4073b9_b.jpg" title="Skyhole - Sun is up in Punta Cana, DR (On Explorer 7/14/2015)" data-gallery="">
+            <img src="https://farm1.static.flickr.com/423/19689531655_a55e4073b9_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/506/19672190882_46c2f46ab0_b.jpg" title="Colores de amanecer (Explore 14/07/2015)" data-gallery="">
+            <img src="https://farm1.static.flickr.com/506/19672190882_46c2f46ab0_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/387/19071027264_92aaa2a2d2_b.jpg" title="Going Away" data-gallery="">
+            <img src="https://farm1.static.flickr.com/387/19071027264_92aaa2a2d2_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/330/19697728321_e02219251d_b.jpg" title="Biggie Smalls" data-gallery="">
+            <img src="https://farm1.static.flickr.com/330/19697728321_e02219251d_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/333/19068714823_0e560f1422_b.jpg" title="rasta drops" data-gallery="">
+            <img src="https://farm1.static.flickr.com/333/19068714823_0e560f1422_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/261/19489453210_d8bb2dd565_b.jpg" title="Quietude over the lake - Grandma and Grandpa took a swim" data-gallery="">
+            <img src="https://farm1.static.flickr.com/261/19489453210_d8bb2dd565_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/507/19484983770_52f18cd906_b.jpg" title="Marbled White Butterfly, Friston Forest" data-gallery="">
+            <img src="https://farm1.static.flickr.com/507/19484983770_52f18cd906_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/546/19664163176_85a74b0a90_b.jpg" title="Lights" data-gallery="">
+            <img src="https://farm1.static.flickr.com/546/19664163176_85a74b0a90_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/413/19498744208_ddbca19f47_b.jpg" title="Wide" data-gallery="">
+            <img src="https://farm1.static.flickr.com/413/19498744208_ddbca19f47_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/344/19679486241_d0876b5132_b.jpg" title="Midsummer's Drift" data-gallery="">
+            <img src="https://farm1.static.flickr.com/344/19679486241_d0876b5132_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/407/19671638306_25f37443cd_b.jpg" title="Just a rainy day" data-gallery="">
+            <img src="https://farm1.static.flickr.com/407/19671638306_25f37443cd_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/287/19514120480_57b7fe80b5_b.jpg" title="Welcome Syawal [explored]" data-gallery="">
+            <img src="https://farm1.static.flickr.com/287/19514120480_57b7fe80b5_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/489/19677645122_e618c7b1b3_b.jpg" title="Colors of summer" data-gallery="">
+            <img src="https://farm1.static.flickr.com/489/19677645122_e618c7b1b3_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/482/19070337474_b34150b181_b.jpg" title="twee jagers : Weidebeekjuffer en blauwe reiger./ two hunters." data-gallery="">
+            <img src="https://farm1.static.flickr.com/482/19070337474_b34150b181_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/504/19695094215_e2c88a1a07_b.jpg" title="Mirror Lake" data-gallery="">
+            <img src="https://farm1.static.flickr.com/504/19695094215_e2c88a1a07_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/372/19487756440_4ff7cf49b1_b.jpg" title="passing by" data-gallery="">
+            <img src="https://farm1.static.flickr.com/372/19487756440_4ff7cf49b1_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/483/19701256941_f3448a3981_b.jpg" title="When silence quides your minds" data-gallery="">
+            <img src="https://farm1.static.flickr.com/483/19701256941_f3448a3981_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/467/19692369485_6566e5050b_b.jpg" title="Stormy Seas" data-gallery="">
+            <img src="https://farm1.static.flickr.com/467/19692369485_6566e5050b_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/447/19511253249_034130e9fd_b.jpg" title="Colourful sunset" data-gallery="">
+            <img src="https://farm1.static.flickr.com/447/19511253249_034130e9fd_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/282/19676760865_a3c04df040_b.jpg" title="Bittersweet" data-gallery="">
+            <img src="https://farm1.static.flickr.com/282/19676760865_a3c04df040_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/447/19497262538_2b71f13b29_b.jpg" title="Mountains" data-gallery="">
+            <img src="https://farm1.static.flickr.com/447/19497262538_2b71f13b29_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/310/19647565836_943f8b6e99_b.jpg" title="Paper Kite (Wood Nymph) Butterfly" data-gallery="">
+            <img src="https://farm1.static.flickr.com/310/19647565836_943f8b6e99_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/548/19682969822_6dcc24a7b6_b.jpg" title="HKW" data-gallery="">
+            <img src="https://farm1.static.flickr.com/548/19682969822_6dcc24a7b6_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/257/19502744658_4020ac67d1_b.jpg" title="La crique du Port Blanc , Erquy" data-gallery="">
+            <img src="https://farm1.static.flickr.com/257/19502744658_4020ac67d1_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/408/19497871358_54322a1323_b.jpg" title="Slow and steady wins the race" data-gallery="">
+            <img src="https://farm1.static.flickr.com/408/19497871358_54322a1323_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/409/19509198590_60a09e5f47_b.jpg" title="On His Own" data-gallery="">
+            <img src="https://farm1.static.flickr.com/409/19509198590_60a09e5f47_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/461/19505222489_e1d21d9d70_b.jpg" title="English Lavender  - Sunset" data-gallery="">
+            <img src="https://farm1.static.flickr.com/461/19505222489_e1d21d9d70_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/495/19501745038_0a91ce8d3d_b.jpg" title="Sunset" data-gallery="">
+            <img src="https://farm1.static.flickr.com/495/19501745038_0a91ce8d3d_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/540/19050927484_af923f74b0_b.jpg" title="Twitter Tuesday: Fruits" data-gallery="">
+            <img src="https://farm1.static.flickr.com/540/19050927484_af923f74b0_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/342/19694443421_dd5a1ca298_b.jpg" title="Olvida el Tiempo" data-gallery="">
+            <img src="https://farm1.static.flickr.com/342/19694443421_dd5a1ca298_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/401/19691071915_e2a0f3d01f_b.jpg" title="Sorrow" data-gallery="">
+            <img src="https://farm1.static.flickr.com/401/19691071915_e2a0f3d01f_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/393/19490377280_6097556d51_b.jpg" title="Rio Paine waterfalls" data-gallery="">
+            <img src="https://farm1.static.flickr.com/393/19490377280_6097556d51_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/262/19070901793_a6c5162278_b.jpg" title="Toronto Pan Am Games Opening Ceremony" data-gallery="">
+            <img src="https://farm1.static.flickr.com/262/19070901793_a6c5162278_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/309/19073950064_fdd9a2a912_b.jpg" title="Infestation" data-gallery="">
+            <img src="https://farm1.static.flickr.com/309/19073950064_fdd9a2a912_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/482/19681681612_1f43e05fa0_b.jpg" title="Lake Illawarra" data-gallery="">
+            <img src="https://farm1.static.flickr.com/482/19681681612_1f43e05fa0_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/517/19688000951_1afe54b889_b.jpg" title="a little world on a dandelion seed" data-gallery="">
+            <img src="https://farm1.static.flickr.com/517/19688000951_1afe54b889_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/369/19051823684_d35785e89f_b.jpg" title="Moved On" data-gallery="">
+            <img src="https://farm1.static.flickr.com/369/19051823684_d35785e89f_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/512/19687339991_c30d6da2f5_b.jpg" title="Light and lines" data-gallery="">
+            <img src="https://farm1.static.flickr.com/512/19687339991_c30d6da2f5_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/402/19671460962_74f2e4a9e4_b.jpg" title="On The Beach" data-gallery="">
+            <img src="https://farm1.static.flickr.com/402/19671460962_74f2e4a9e4_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/538/19060161194_89d7b1dfb3_b.jpg" title="Greylag Goose - Anser anser" data-gallery="">
+            <img src="https://farm1.static.flickr.com/538/19060161194_89d7b1dfb3_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/540/19495255068_b2cb552c0a_b.jpg" title="United Arab Emirates" data-gallery="">
+            <img src="https://farm1.static.flickr.com/540/19495255068_b2cb552c0a_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/459/19487850218_7d02aa7bae_b.jpg" title="154/365.  Returning VIII" data-gallery="">
+            <img src="https://farm1.static.flickr.com/459/19487850218_7d02aa7bae_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/462/19661478196_b17f0d8933_b.jpg" title="Walnut under construction" data-gallery="">
+            <img src="https://farm1.static.flickr.com/462/19661478196_b17f0d8933_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/355/19505885058_e771af1744_b.jpg" title="Enfin tranquille ... quiet !" data-gallery="">
+            <img src="https://farm1.static.flickr.com/355/19505885058_e771af1744_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/405/19666293486_330aa2f577_b.jpg" title="Huxley" data-gallery="">
+            <img src="https://farm1.static.flickr.com/405/19666293486_330aa2f577_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/438/19682572605_7f82684c8d_b.jpg" title="French national day" data-gallery="">
+            <img src="https://farm1.static.flickr.com/438/19682572605_7f82684c8d_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/344/19670274156_c59676dc85_b.jpg" title="perličky" data-gallery="">
+            <img src="https://farm1.static.flickr.com/344/19670274156_c59676dc85_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/418/19498503590_0fd02f676a_b.jpg" title="Stand the Test of Time" data-gallery="">
+            <img src="https://farm1.static.flickr.com/418/19498503590_0fd02f676a_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/344/19492632889_31a6c3800c_b.jpg" title="Balle di paglia" data-gallery="">
+            <img src="https://farm1.static.flickr.com/344/19492632889_31a6c3800c_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/439/19653904176_43699de673_b.jpg" title="st-70" data-gallery="">
+            <img src="https://farm1.static.flickr.com/439/19653904176_43699de673_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/549/19697965841_1ce1baeb40_b.jpg" title="Wallpaper entrance" data-gallery="">
+            <img src="https://farm1.static.flickr.com/549/19697965841_1ce1baeb40_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/532/19487403820_2ca042ccf5_b.jpg" title="." data-gallery="">
+            <img src="https://farm1.static.flickr.com/532/19487403820_2ca042ccf5_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/431/19497455720_fc554825b6_b.jpg" title="Sunrise From Gummers How" data-gallery="">
+            <img src="https://farm1.static.flickr.com/431/19497455720_fc554825b6_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/273/19062309573_7a6dcd5694_b.jpg" title="Hofgeismar (Germany)" data-gallery="">
+            <img src="https://farm1.static.flickr.com/273/19062309573_7a6dcd5694_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/441/19051745004_3b713ff5e3_b.jpg" title="Wax worm, U, Maryland, side_2015-07-13-13.01.17 ZS PMax" data-gallery="">
+            <img src="https://farm1.static.flickr.com/441/19051745004_3b713ff5e3_s.jpg">
+            </a>
+            <a href="https://farm4.static.flickr.com/3800/19656222826_59471fcd69_b.jpg" title="L'Oisillon dans son nid" data-gallery="">
+            <img src="https://farm4.static.flickr.com/3800/19656222826_59471fcd69_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/264/19511790068_3081d48b62_b.jpg" title="Transmission Tower and Milky Way" data-gallery="">
+            <img src="https://farm1.static.flickr.com/264/19511790068_3081d48b62_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/479/19055533154_591284c08a_b.jpg" title="Moody Cymer Abbey" data-gallery="">
+            <img src="https://farm1.static.flickr.com/479/19055533154_591284c08a_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/294/19650143646_c6bac53a33_b.jpg" title="PHX URBAN LANDSCAPE" data-gallery="">
+            <img src="https://farm1.static.flickr.com/294/19650143646_c6bac53a33_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/455/19502878340_937289410b_b.jpg" title="Sunset on Dal Lake, Srinagar, Kashmir, north India" data-gallery="">
+            <img src="https://farm1.static.flickr.com/455/19502878340_937289410b_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/522/19684376691_13ce7dbd97_b.jpg" title="Sunset in Sanremo, Italy" data-gallery="">
+            <img src="https://farm1.static.flickr.com/522/19684376691_13ce7dbd97_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/336/19074200353_7a8df4b6c1_b.jpg" title="Arcadia" data-gallery="">
+            <img src="https://farm1.static.flickr.com/336/19074200353_7a8df4b6c1_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/361/19688307682_e744da4fe7_b.jpg" title="When theres nothing left to burn." data-gallery="">
+            <img src="https://farm1.static.flickr.com/361/19688307682_e744da4fe7_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/470/19486100668_2de91778cc_b.jpg" title="Purple Haze" data-gallery="">
+            <img src="https://farm1.static.flickr.com/470/19486100668_2de91778cc_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/442/19706884861_3ec7ed5382_b.jpg" title="Bamburgh Lighthouse" data-gallery="">
+            <img src="https://farm1.static.flickr.com/442/19706884861_3ec7ed5382_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/517/19503804378_a971fa2b0c_b.jpg" title="Forgotten bench" data-gallery="">
+            <img src="https://farm1.static.flickr.com/517/19503804378_a971fa2b0c_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/559/19074210413_f7eae1ab5e_b.jpg" title="Innenleben - The Inner" data-gallery="">
+            <img src="https://farm1.static.flickr.com/559/19074210413_f7eae1ab5e_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/264/19699762771_d90a484f07_b.jpg" title="Smart kids!" data-gallery="">
+            <img src="https://farm1.static.flickr.com/264/19699762771_d90a484f07_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/329/19067330693_d6eda75e7d_b.jpg" title="Ride the Waves" data-gallery="">
+            <img src="https://farm1.static.flickr.com/329/19067330693_d6eda75e7d_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/531/19065871174_758e8c8ef2_b.jpg" title="_Z0U9192" data-gallery="">
+            <img src="https://farm1.static.flickr.com/531/19065871174_758e8c8ef2_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/402/19074266894_5d01d4acde_b.jpg" title="Amsterdam." data-gallery="">
+            <img src="https://farm1.static.flickr.com/402/19074266894_5d01d4acde_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/455/19062397623_e85a9d47cd_b.jpg" title="Factory 2601" data-gallery="">
+            <img src="https://farm1.static.flickr.com/455/19062397623_e85a9d47cd_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/462/19495875489_935dd41e7e_b.jpg" title="Flowing" data-gallery="">
+            <img src="https://farm1.static.flickr.com/462/19495875489_935dd41e7e_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/355/19687078451_f00b7ca910_b.jpg" title="Reversailles" data-gallery="">
+            <img src="https://farm1.static.flickr.com/355/19687078451_f00b7ca910_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/294/19693333602_43bd4e3ac4_b.jpg" title="pier" data-gallery="">
+            <img src="https://farm1.static.flickr.com/294/19693333602_43bd4e3ac4_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/349/19683273522_7b6273e4b1_b.jpg" title="Corría huyendo de sí mismo" data-gallery="">
+            <img src="https://farm1.static.flickr.com/349/19683273522_7b6273e4b1_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/329/19057820243_5abf80a169_b.jpg" title="Emerald Sunrise" data-gallery="">
+            <img src="https://farm1.static.flickr.com/329/19057820243_5abf80a169_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/507/19688024611_cf5d364441_b.jpg" title="Verona" data-gallery="">
+            <img src="https://farm1.static.flickr.com/507/19688024611_cf5d364441_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/536/19691137312_a9c2eb78b2_b.jpg" title="I 3 porcellini, vivono quì !!!" data-gallery="">
+            <img src="https://farm1.static.flickr.com/536/19691137312_a9c2eb78b2_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/294/19668749106_e3ab41e435_b.jpg" title="Reach up for the sky." data-gallery="">
+            <img src="https://farm1.static.flickr.com/294/19668749106_e3ab41e435_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/437/19500681798_58f7126bc9_b.jpg" title="WIP" data-gallery="">
+            <img src="https://farm1.static.flickr.com/437/19500681798_58f7126bc9_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/317/19061871964_6907367f36_b.jpg" title="Tussock Tarn Sunset IX" data-gallery="">
+            <img src="https://farm1.static.flickr.com/317/19061871964_6907367f36_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/299/19504212399_565b883160_b.jpg" title="Tramonto in montagna    # 6#  Explore 15/7/2015" data-gallery="">
+            <img src="https://farm1.static.flickr.com/299/19504212399_565b883160_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/379/19676361092_d9b5be22d0_b.jpg" title="si j'avais un marteau......" data-gallery="">
+            <img src="https://farm1.static.flickr.com/379/19676361092_d9b5be22d0_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/334/19497554888_61d0f7dd41_b.jpg" title="Eye of the Ocean.." data-gallery="">
+            <img src="https://farm1.static.flickr.com/334/19497554888_61d0f7dd41_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/268/19061645174_63794f66a2_b.jpg" title="Sunset Silhouette" data-gallery="">
+            <img src="https://farm1.static.flickr.com/268/19061645174_63794f66a2_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/490/19646938686_36fee793ea_b.jpg" title="Fingal head sunrise" data-gallery="">
+            <img src="https://farm1.static.flickr.com/490/19646938686_36fee793ea_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/305/19515856459_9df46fea0b_b.jpg" title="Storm over land" data-gallery="">
+            <img src="https://farm1.static.flickr.com/305/19515856459_9df46fea0b_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/273/19694887311_74326ffb21_b.jpg" title="El mundo me da vueltas..." data-gallery="">
+            <img src="https://farm1.static.flickr.com/273/19694887311_74326ffb21_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/324/19074965374_6aeb6a16f6_b.jpg" title="The Cashier" data-gallery="">
+            <img src="https://farm1.static.flickr.com/324/19074965374_6aeb6a16f6_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/430/19060593323_901474a83b_b.jpg" title="Jammin with Jellies, Point Defiance Park, Tacoma, WA" data-gallery="">
+            <img src="https://farm1.static.flickr.com/430/19060593323_901474a83b_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/340/19693454331_3218f9dbda_b.jpg" title="Urban Boating..." data-gallery="">
+            <img src="https://farm1.static.flickr.com/340/19693454331_3218f9dbda_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/395/19071304354_4fabf2c7b7_b.jpg" title="Le bonheur d'être en mer" data-gallery="">
+            <img src="https://farm1.static.flickr.com/395/19071304354_4fabf2c7b7_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/271/19680082401_5b5875a06a_b.jpg" title="Semipalmated Sandpiper (Calidris pusilla)" data-gallery="">
+            <img src="https://farm1.static.flickr.com/271/19680082401_5b5875a06a_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/257/19677223672_2d062cc3ce_b.jpg" title="2015-06-20_Lievre_3687" data-gallery="">
+            <img src="https://farm1.static.flickr.com/257/19677223672_2d062cc3ce_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/368/19491507489_bc92baf89b_b.jpg" title="Battle Between Light and Dark" data-gallery="">
+            <img src="https://farm1.static.flickr.com/368/19491507489_bc92baf89b_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/288/19700822731_3970e36d8b_b.jpg" title="Every year is getting shorter never seem to find the time." data-gallery="">
+            <img src="https://farm1.static.flickr.com/288/19700822731_3970e36d8b_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/388/19058843854_e7d6033468_b.jpg" title="Lands End" data-gallery="">
+            <img src="https://farm1.static.flickr.com/388/19058843854_e7d6033468_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/442/19689953642_ded681b888_b.jpg" title="...alba #2444... (Explore)" data-gallery="">
+            <img src="https://farm1.static.flickr.com/442/19689953642_ded681b888_s.jpg">
+            </a>
+            <a href="https://farm1.static.flickr.com/444/19671480636_395cc3bf2c_b.jpg" title="WIP mech dump. Will finish this guy within the week or so." data-gallery="">
+            <img src="https://farm1.static.flickr.com/444/19671480636_395cc3bf2c_s.jpg">
+            </a>
+        </div>
+
+        <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
+    <!-- The container for the modal slides -->
+    <div class="slides" style="width: 128000px;"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title">United Arab Emirates</h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">×</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    </div>
+
+
+</div>
+</body>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="javascript/bootstrap.min.js"></script>
+<!-- Swiper Slider JS -->
+<script src="javascript/swiper.min.js"></script>
+<!-- Gallery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+<script src="javascript/bootstrap-image-gallery.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script type="text/javascript">
+
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false,
+        speed: 700
+    });
+
+</script>
+</body>
+</html>
