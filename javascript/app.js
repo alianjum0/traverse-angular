@@ -6,7 +6,7 @@
 // Code goes here
 
 var nodebb_link = 'http://localhost:4567/api/'
-var app = angular.module('ionicApp', ['ionic','ui.bootstrap'])
+var app = angular.module('ionicApp', [ 'ionic','ui.bootstrap'])
 
 app.config(function($stateProvider, $urlRouterProvider,$httpProvider, $ionicConfigProvider) {
 $httpProvider.defaults.withCredentials = true;
@@ -68,7 +68,7 @@ app.controller('HomeControl', function($scope, $http,TodosService,$timeout) {
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
             paginationClickable: true,
-            spaceBetween: 30,
+//            spaceBetween: 30,
             centeredSlides: true,
             autoplay: 2500,
             autoplayDisableOnInteraction: false,
@@ -78,36 +78,36 @@ app.controller('HomeControl', function($scope, $http,TodosService,$timeout) {
     });
     
     $scope.init = function () {
-//        $http.get(nodebb_link  +  'recent').
-//          success(function(data, status, headers, config) {
-//            if(data)
-//            {
-//                topics = data.topics
-//                topics = topics.slice(0, 3);
-//                console.log(data);
-//                for ( i = 0; i < topics.length; i++ )
-//                {
-//                    console.log(topics[i].tid)
-//                    $http.get(nodebb_link  +  'post/'+topics[i].tid).
-//                      success(function(data, status, headers, config) {
-//                        if(data)
-//                        {
-//                            console.log(data.content)
-//                            topics.content = data.content
-//                        }
-//                    })
-//                }
-//                $scope.topics = topics
-//            }
-//        });
-//        $http.get('http://localhost:4567/site/place/1').
-//          success(function(data, status, headers, config) {
-//            if(data)
-//            {
-//                console.log(data.result[0]);
-//                $scope.place = data.result[0]
-//            }
-//        });
+        $http.get(nodebb_link  +  'recent').
+          success(function(data, status, headers, config) {
+            if(data)
+            {
+                topics = data.topics
+                topics = topics.slice(0, 3);
+                console.log(data);
+                for ( i = 0; i < topics.length; i++ )
+                {
+                    console.log(topics[i].tid)
+                    $http.get(nodebb_link  +  'post/'+topics[i].tid).
+                      success(function(data, status, headers, config) {
+                        if(data)
+                        {
+                            console.log(data.content)
+                            topics.content = data.content
+                        }
+                    })
+                }
+                $scope.topics = topics
+            }
+        });
+        $http.get('http://localhost:4567/site/place/1').
+          success(function(data, status, headers, config) {
+            if(data)
+            {
+                console.log(data.result[0]);
+                $scope.place = data.result[0]
+            }
+        });
     };
     
 })
